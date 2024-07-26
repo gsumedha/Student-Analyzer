@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View All Students</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">All Students Data</h1>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Roll Number</th>
+                    <th>1st Semester</th>
+                    <th>2nd Semester</th>
+                    <th>3rd Semester</th>
+                    <th>4th Semester</th>
+                    <th>5th Semester</th>
+                    <th>6th Semester</th>
+                    <th>7th Semester</th>
+                    <th>8th Semester</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                    <tr>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.class }}</td>
+                        <td>{{ student.roll_number }}</td>
+                        <td>{{ student['1st_semester'] }}</td>
+                        <td>{{ student['2nd_semester'] }}</td>
+                        <td>{{ student['3rd_semester'] }}</td>
+                        <td>{{ student['4th_semester'] }}</td>
+                        <td>{{ student['5th_semester'] }}</td>
+                        <td>{{ student['6th_semester'] }}</td>
+                        <td>{{ student['7th_semester'] }}</td>
+                        <td>{{ student['8th_semester'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Student Data</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .form-group.full-width {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            padding: 12px 50px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Student Data</h1>
+        <form action="/update?roll_number={{ student['roll_number'] }}" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="{{ student['name'] }}" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="class">Class:</label>
+                <input type="text" id="class" name="class" value="{{ student['class'] }}" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="cgpa1">1st Semester CGPA:</label>
+                <input type="text" id="cgpa1" name="cgpa1" value="{{ student['1st_semester'] }}">
+            </div>
+            
+            <div class="form-group">
+                <label for="cgpa2">2nd Semester CGPA:</label>
+                <input type="text" id="cgpa2" name="cgpa2" value="{{ student['2nd_semester'] }}">
+            </div>
+            
+            <div class="form-group">
+                <label for="cgpa3">3rd Semester CGPA:</label>
+                <input type="text" id="cgpa3" name="cgpa3" value="{{ student['3rd_semester'] }}">
+            </div>
+            
+            <div class="form-group">
+                <label for="cgpa4">4th Semester CGPA:</label>
+                <input type="text" id="cgpa4" name="cgpa4" value="{{ student['4th_semester'] }}">
+            </div>
+            
+            <div class="form-group">
+                <label for="cgpa5">5th Semester CGPA:</label>
+                <input type="text" id="cgpa5" name="cgpa5" value="{{ student['5th_semester'] }}">
+            </div>
+            
+            <div class="form-group">
+                <label for="cgpa6">6th Semester CGPA:</label>
+                <input type="text" id="cgpa6" name="cgpa6" value="{{ student['6th_semester'] }}">
+            </div>
+            
+            <div class="form-group">
+                <label for="cgpa7">7th Semester CGPA:</label>
+                <input type="text" id="cgpa7" name="cgpa7" value="{{ student['7th_semester'] }}">
+            </div>
+            
+            <div class="form-group">
+                <label for="cgpa8">8th Semester CGPA:</label>
+                <input type="text" id="cgpa8" name="cgpa8" value="{{ student['8th_semester'] }}">
+            </div>
+            
+            <div class="form-group full-width">
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
